@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="class.css">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet">
+    <link rel="shortcut icon" href="/SVG/icon.svg">
+  
+    <title>classes</title>
+</head>
+<body>
+   
+    <div class="container">
+   
+        <header class="header">
+            <img src="logo/Vision.png" alt="Vision logo" class="logo">
+            <form action="/logout" method="post">
+                <input type="submit" name="logout" id="logout" value="Logout">
+                
+            </form>
+       </header>
+
+        <div class="class-container">
+
+            
+                <ul class="ul-header">
+                    <li id="thDay" style="flex: 0 0 15%;">MANAGED BY</li>
+                    <li id="thRegular" style="flex: 0 0 10%;">STATUS</li>
+                    <li id="thOvertime" style="flex: 0 0 50%;">CLASSNAME</li>
+
+                    <li id="thOvertime"">CLASSCODE</li>
+                 </ul>
+                 <form action="/classname" method="post">
+              
+                    <% data.forEach(function(element){ %>
+                    <ul>
+                        <li class="username" style="flex: 0 0 15.5%;" for=" <%=  element.id  %>">  <label for="<%= element.id %>" class="classname_name golden"> <%- element.username %>  </label>
+                        </li>  
+                             <li class="status "  style="flex: 0 0 10%" for=" <%=  element.id  %>"><% if (element.status == 0) { %>
+                                <label for="<%= element.id %>" class="classname_name"> OFFLINE  </label>
+                          
+                                <%} else { %>
+                                    <label for="<%= element.id %>" class="classname_name golden "><%- element.status %></label>
+                          
+                                <% } %>
+                                </li>  
+                                <li style="flex: 0 0 48%">
+                                    <label for="<%= element.id %>" class="classname_name"> <%- element.classname %>  </label>
+                                </li>
+                             <li  style="flex: 0 0 15%">
+                             
+                                <label for="<%= element.id %>" class="classname_name"> <%= element.maped_name %> </label>
+                             </li>
+
+                            <li>
+                                <input type="radio" name="class" id="<%= element.id %>" value="<%= element.maped_name %>"
+                                data-id="<%= element.id %>" data-mappedname="<%= element.maped_name %>" undefined="">
+                         
+                            </li>
+
+                       
+                    </ul>
+              
+                      <% }) %>
+                
+                
+                
+            </tbody>
+       
+
+       <!--<div class="list__content" style="display: flex;">
+            <div class="content__listcontainer">
+                <div class="content_listcontainer-heading">
+                    <span style="flex: 0 0 18%;">MANAGED BY</span>
+                    <span style="flex: 1 0 15%;">STATUS</span>
+                    <span style="flex: 0 0 65%;">CLASSNAME</span>    
+                </div>
+
+                <div class="content__listcointainer-box">
+                    <% data.forEach(function(element){ %>
+                        <label for="<%= element.id %>" class="content__listcontainer--classname">
+                             <label class="username" for=" <%=  element.id  %>"> <%- element.username %> </label>  
+                             <label class="status"   for=" <%=  element.id  %>"><% if (element.status == 0) { %>
+                                OFFLINE
+                                <%} else { %>
+                                    <%= element.status %> 
+                                <% } %>
+                                </label>  
+                             
+                             <div class="label-conatiner">
+                                <label for="<%= element.id %>" class="classname_name"> <%= element.maped_name %> </label>
+                                <input type="radio" name="class" id="<%= element.id %>" value="<%= element.maped_name %>"
+                                data-id="<%= element.id %>" data-mappedname="<%= element.maped_name %>" undefined="">
+                             </div>
+                             <div>
+                            </div>
+                        </label>
+                       
+                      <% }) %>
+            </div>
+
+--->
+        
+                <div class="coontent__listcontainer--button ">
+                     <button class="select">Select</button> 
+                </div>
+            </form>
+
+            
+            </div>
+        </div>    
+      
+
+
+</div>
+
+<script>
+
+
+  
+
+</script>
+</body>
+</html>

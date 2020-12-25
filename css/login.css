@@ -1,0 +1,157 @@
+
+.main-container {
+    background-color: white;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    font-size: 1.5rem;
+    padding: 3rem 5.5rem;
+}
+.main-container *:not(:last-child){
+    margin-bottom:2rem;
+}
+
+.form *:not(:last-child){
+    margin-bottom:2.5rem;
+    
+}
+.main-container .singin {
+
+    color: #4886ff;
+    text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.1);
+    font-size: 3.4rem;
+    padding-top: 1rem;
+    font-weight: 700;
+}
+
+.main-container input[type=text],  input[type=password]{
+    width: 100%;
+    padding: 1.3rem 2rem;
+    border: 1px solid  #80868b;;
+    border-radius: 3px;
+    font-family: inherit;
+    font-size: 1.5rem;
+    
+}
+
+.main-container .span{
+    background: #fff;
+    bottom: 12px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    color: #80868b;
+    font-size: 16px;
+    font-weight: 400;
+    left: 8px;
+    padding: 0 8px;
+    -webkit-transition: transform 150ms cubic-bezier(0.4,0,0.2,1),opacity 150ms cubic-bezier(0.4,0,0.2,1);
+    transition: transform 150ms cubic-bezier(0.4,0,0.2,1),opacity 150ms cubic-bezier(0.4,0,0.2,1);
+    width: auto;
+    z-index: 1;
+}
+.content{
+    flex: 1;
+}
+.main-container .login{
+
+    display: flex;
+    justify-content: space-between;
+    justify-items: center;
+    
+}
+
+.login .create_account{
+    color: #4886ff;
+    font-weight: 500;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+.login .login-button_container{
+    width: 100%;
+}
+.postionrelative{
+
+    position: relative;
+}
+
+.positionabsolute{
+
+    position:absolute;
+}
+
+.main-container input[type=submit]{
+    border: none;
+    background: #4886ff;
+    padding: 1.2rem;
+    color: white;
+    font-family: inherit;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    font-weight: 500;
+    border-radius: 2px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.main-container .forget-container{
+    width: 78%;
+    color: #4886ff;
+    font-weight: 500;
+
+}
+
+.main-container .heading{
+    display: flex;
+    align-items: center;
+}
+.main-container .heading .logo{
+    margin-left: .8rem;
+}
+.textshadow{
+    text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.1);
+}
+
+.error{
+
+    color: #ff3434;
+    font-weight: 500;
+}
+.svg-container{
+    flex: 0 0 65%;
+    position: relative;
+    background: radial-gradient(102.04% 102.04% at 50% 50%, #6C63FF 0%, rgba(108, 99, 255, 0.86) 100%);
+}
+.svg-container svg{
+    width: 90%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.container{
+    display: flex;
+}
+
+.container .quotes{
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    font-size: 1.5rem;
+    color: white;
+    bottom: 0px;
+    padding: 3rem 0 2rem 10rem; background: radial-gradient(102.04% 102.04% at 50% 50%, #6C63FF 0%, rgba(108, 99, 255, 0.86) 100%);
+}
+
+.quotes p{
+    color: #f7bc5b;
+    font-size: 3rem;
+    font-weight: 700;
+    border-bottom: .5rem solid;
+    width: fit-content;
+    text-transform: capitalize;
+
+
+}

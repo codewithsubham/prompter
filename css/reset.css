@@ -1,0 +1,63 @@
+/* Global reset */
+
+*,
+*::before,
+*::after{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+   
+}
+*:focus {
+    outline: none;
+}
+html{
+    font-size: 62.5%; 
+    -webkit-font-smoothing: antialiased;
+    font-weight: 400;
+    text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.1);
+}
+
+body{
+
+    font-family: 'Quicksand' ,  sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    background-color: #F6F7FB;
+    color:  #202124;
+}
+ul {
+
+    list-style: none;
+}
+
+a:link,
+a:visited{
+
+    text-decoration: none;
+    display: block;
+    color: currentColor;
+}
+.container{
+    
+    width: 100%;
+    margin: 0 auto;
+    background-color: #F6F7FB;
+    min-height:100vh; 
+}
+
+.header{
+
+    height: 14rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0 0 var(--left-padding);
+}
+
+.logo{
+   
+    width: 19rem;
+    height: auto;
+}
+

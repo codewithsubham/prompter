@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title><%= classCode %></title>
+    <script src="/socket.io/socket.io.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet">
+    <link rel="shortcut icon" href="/SVG/icon.svg">
+    <style>
+
+        html{
+            font-family: 'Quicksand' , sans-serif;
+        }
+
+        .seperator{
+            
+            background: #F5A741;
+            width: 7rem;
+            height: 2px;
+            margin-right: 14px;
+            flex: 0 0 5%;
+
+        }
+        .seperator::after{
+            position: absolute;
+            background: white;
+            width: .5rem;
+            border: 2px solid #F5A741;
+            height: .5rem;
+            margin-right: 14px;
+            flex: 0 0 5%;
+            content: "";
+            bottom: -12px;
+            left: -7px;
+            border-radius: 20px;
+        }
+        .query{
+            border-left: 2px solid #F5A741;
+            display: flex;
+            align-items: center;
+            margin-bottom: .7rem;
+            position: relative;
+            font-family: 'Quicksand' , sans-serif;
+        }
+        .username{
+            letter-spacing: 1px;
+            width: fit-content;
+            padding: 0 13px;
+            color: white;
+            border-radius: 3px;
+            text-transform: uppercase;
+            margin: 3px 0 0 0;
+            font-size: 3vh;
+        }
+        
+    </style>
+   
+</head>
+
+<body style="font-size: 4.9vh;
+    font-weight: 600;
+    text-shadow: azure;
+    color: black;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    text-transform: capitalize;
+    user-select: none;
+    letter-spacing: 2.5px;
+    word-break: break-word;
+    text-shadow: 0rem 0rem 2rem rgb(255, 255, 255);
+    width: 98%;
+    padding: 0 1rem;
+    margin: 0;
+    ">
+    
+</body>
+<script>
+    let classCode = "<%= classCode %>".toUpperCase();
+    let isUsernameAvailable = "sdds";
+
+</script>
+<script src="/receiver.js"></script>
+
+</html>

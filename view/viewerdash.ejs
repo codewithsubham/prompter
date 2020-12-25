@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+
+    <link rel="stylesheet" href="viewerdash.css">
+    <script src="/socket.io/socket.io.js"></script>
+  
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet">
+   
+    
+    <title>class status</title>
+ 
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <img src="logo/Vision.png" alt="Vision logo" class="logo">
+         </header>
+        <div class="class-container">
+            
+           
+             
+             <form action="/queryrecever" id="form" method="POST">
+                <table>
+                    <thead class="ul-header">
+                        <tr>
+                            <td>MANAGED BY</td>
+                            <td>STATUS</td>
+                            <td>CLASSNAME</td>
+                            <td>CLASSCODE</td>
+                          <!--
+                            <td>Login</td>
+                            -->
+                            <td>QRCODE</td>
+                            
+                            <td></td>
+                        </tr>
+                    </thead>
+                <% data.forEach(function(element){ %>
+
+                    <tbody>
+                        <tr>
+                          <td class="center"><%- element.username %></td>
+                          <td class="center"><% if (element.status == 0) { %>
+                            <label for="<%= element.id %>" class="classname_name"> OFFLINE  </label>
+                      
+                            <%} else { %>
+                                <label for="<%= element.id %>" class="classname_name golden "><%- element.status %></label>
+                      
+                            <% } %>
+                        </td>
+                        <td>
+                            <label for="<%= element.id %>" class="classname_name"> <%- element.classname %>  </label>
+                        </td>
+                        <td class="center">
+                            <label for="<%= element.id %>" class="classname_name"> <%= element.maped_name %> </label>
+                        </td>
+                      
+                        
+                        <td class="center">
+                            <img src="<%= element.qr_code %>">
+                          </td>
+                          
+
+                        <td class="center">
+                            <a href="/queryreceiver/<%=element.maped_name %>">launch</a>
+                        </td>
+                        
+                        </tr>
+                    </tbody>
+
+                 <% }) %>
+                  <input type="text"  style="display: none"; name="maped_class_data" >
+                    
+                </table>
+        </tbody>
+   </form>
+
+        
+        </div>
+    </div> 
+
+      
+
+
+
+</div>
+
+<script>
+
+    let pageId =  "<%= pageId %>";
+    var socket = io.connect(window.location.host , { query: `classCode=${pageId}`});
+
+
+
+    socket.on(pageId , (data) => {
+        
+        document.querySelector('input[name=maped_class_data]').value = JSON.stringify(data);
+        document.getElementById("form").submit();
+
+    })
+
+
+    
+
+
+
+
+
+</script>
+
+</body>
+</html>
